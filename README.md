@@ -1,6 +1,6 @@
 # Prometheus Workshop
 
-![Architecture](https://github.com/krunalvora/prometheus-workshop/blob/images/images/Prometheus%20Workshop.jpg)
+![Architecture](https://github.com/krunalvora/prometheus-workshop/blob/images/images/PrometheusWorkshop.png)
 
 ### Run prometheus on docker using custom prometheus yaml
 
