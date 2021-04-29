@@ -1,0 +1,5 @@
+groups:
+  - name: requests
+    rules:
+      - record: rollup:request_total:5m
+        expr: irate(request_total[5m])

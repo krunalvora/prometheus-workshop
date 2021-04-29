@@ -1,0 +1,15 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'prometheus'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['localhost:9090']
+  - job_name: 'prometheusworkshop'
+    scrape_interval: 5s
+    static_configs:
+      - targets: [ 'host.docker.internal:8081' ]
+
+rule_files:
+  - "prometheus.rules.yml"

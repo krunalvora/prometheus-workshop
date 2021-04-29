@@ -17,6 +17,8 @@ public class Metrics {
     requestsDuration = Histogram.build()
           .help("Requests duration")
           .name("request_seconds")
+          .buckets(.005, .01, .025, .05, .1, .25, .5, 1, 5, 10, 20, 30)
+          // .exponentialBuckets(0.005, 5, 10)
           .register();
   }
 }
