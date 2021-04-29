@@ -1,11 +1,17 @@
 # Prometheus Workshop
 
-1. Start Prometheus Workshop using:
+1. Setup prometheus and grafana:
     ```bash
-    ./start-prometheus-workshop.sh
+    docker-compose up -d
     ```
 
-2. On a separate terminal, connect to port 8080 to start inputting request duration values:
+2. Build and run the Java app:
+   ```shell
+   ./gradlew clean build
+   java -jar build/libs/prometheus-workshop-all.jar
+   ```
+
+3. On a separate terminal, connect to port 8080 to start inputting request duration values:
    ```shell
    nc localhost 8080
    24
@@ -14,7 +20,7 @@
    ...
    ```
 
-3. View prometheus UI on the browser at [localhost:9090](http://localhost:9090)
+4. View Grafana UI on the browser at [localhost:3000](http://localhost:3000)
 
 ### Architecture
 
