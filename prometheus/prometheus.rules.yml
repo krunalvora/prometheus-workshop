@@ -2,4 +2,12 @@ groups:
   - name: requests
     rules:
       - record: rollup:request_total:5m
-        expr: irate(request_total[5m])
+        expr: sum(irate(request_total[5m]))
+      - record: irate_request_seconds_bucket
+        expr: sum(irate(request_seconds_bucket[5m])) by (le)
+      - record: p50_request_seconds
+        expr: histogram_quantile(0.5, irate_request_seconds_bucket)
+      - record: p90_request_seconds
+        expr: histogram_quantile(0.9, irate_request_seconds_bucket)
+      - record: p99_request_seconds
+        expr: histogram_quantile(0.99, irate_request_seconds_bucket)
