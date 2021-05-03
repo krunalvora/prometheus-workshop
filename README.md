@@ -24,5 +24,5 @@
 
 ### Architecture
 
-![Architecture](https://github.com/krunalvora/prometheus-workshop/blob/images/images/PrometheusWorkshop.png)
+![Architecture](https://github.com/krunalvora/prometheus-workshop/blob/images/images/prometheus-workshop.jpg)
 
